@@ -9,7 +9,7 @@ It defines the transport data model used by the backend services.
 ## 📦 Contents
 
 ### Schema Design
-- Entity relationship diagrams
+- Entity relationship diagrams (https://mermaid.ai/d/4f17c618-2f2d-441f-9abb-76cc622e2bf4)
 - Table definitions
 - Relationship explanations
 
@@ -28,12 +28,12 @@ It defines the transport data model used by the backend services.
 ## 📂 Structure
 
 ```text
-/docs
+/schema
 ├── schema.md
+/docs
 ├── erd.mmd
 /migrations
 ├── v1__init.sql
-├── v2__routes.sql
 ```
 
 ---
