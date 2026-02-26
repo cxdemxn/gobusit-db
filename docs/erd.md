@@ -26,6 +26,7 @@ string name
 }
 
 UserRole {
+string id PK
 string userId FK
 string roleId FK
 }

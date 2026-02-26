@@ -10,10 +10,9 @@ CREATE TABLE roles (
 -- USER ROLES (many-to-many)
 -- =========================
 CREATE TABLE user_roles (
+    id VARCHAR(50) PRIMARY KEY,
     user_id VARCHAR(50) NOT NULL,
     role_id VARCHAR(50) NOT NULL,
-
-    PRIMARY KEY (user_id, role_id),
 
     CONSTRAINT fk_userroles_user
         FOREIGN KEY (user_id)
@@ -23,7 +22,10 @@ CREATE TABLE user_roles (
     CONSTRAINT fk_userroles_role
         FOREIGN KEY (role_id)
         REFERENCES roles(id)
-        ON DELETE CASCADE
+        ON DELETE CASCADE,
+
+    CONSTRAINT uk_user_role
+        UNIQUE (user_id, role_id)
 );
 
 -- =========================
