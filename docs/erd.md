@@ -21,14 +21,14 @@ datetime createdAt
 }
 
 Role {
-string id PK
+int id PK
 string name
 }
 
 UserRole {
 string id PK
 string userId FK
-string roleId FK
+int roleId FK
 }
 
 Bus {
